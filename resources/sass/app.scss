@@ -1,0 +1,27 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Font Awesome
+@import "~font-awesome/scss/font-awesome";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Daterangepicker
+@import "~daterangepicker/daterangepicker.scss";
+
+// Datatables
+//@import "~datatables.net-bs/css/dataTables.bootstrap.css";
+////@import "~datatables.net-buttons-bs/css/buttons.bootstrap.css";
+//@import "~datatables.net-responsive-bs/css/responsive.bootstrap.css";
+
+// from template
+@import "../template/custom";
+
+// custom
+@import "helpers";
+@import "styles";

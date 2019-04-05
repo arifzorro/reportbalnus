@@ -1,0 +1,72 @@
+/******************** nav ************************/
+.nav.side-menu > li.current-page, .nav.side-menu > li.active {
+  border-right: 5px solid $secondary-color !important;
+}
+
+.nav-md .container.body .right_col {
+  min-height: 93vh;
+}
+
+/******************** logo dashboard ************************/
+.img-responsive {
+  display: inline;
+  max-width: 20%;
+  max-height: 70%;
+}
+
+.img-responsive-sm {
+  max-width: 73%;
+}
+
+.site_title_sm {
+  padding-left: 15px !important;
+}
+
+/*user foto*/
+.img-circle {
+  width: 73px !important;
+  height: 73px;
+  overflow: hidden;
+}
+
+#avatar img {
+  max-width: 100% !important;
+}
+
+/* input checkbox username */
+.checkbox-username {
+  margin-bottom: 5px !important;
+}
+
+/************** Datatables ***************/
+div.dataTables_wrapper div.dataTables_processing {
+  padding-bottom: 30px !important;
+}
+
+.action_btn_delete, .action_btn_edit, .action_btn_reset{
+  padding: 0 3px !important;
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+.dataTables_length {
+  width: auto;
+  margin-right: 5px;
+}
+
+.header-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-table {
+  font-size: small;
+  display: flex;
+}
+
+#refresh_filter {
+  margin-left: 3px;
+}

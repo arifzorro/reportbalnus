@@ -344,4 +344,10 @@ class Data extends MY_Controller
     {
         $this->render('data/formg_data_gpon');
     }
+    public function reportspbu()
+    {
+        $this->render('data/formspbu');
+    }
+
+
 }

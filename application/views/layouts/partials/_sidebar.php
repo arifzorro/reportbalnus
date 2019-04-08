@@ -2,6 +2,11 @@
     <div class="menu_section">
         <ul class="nav side-menu">
             <li>
+                <a href="<?php route('data/reportspbu'); ?>">
+                    <i class="fa fa-upload"></i> report spbu
+                </a>
+            </li>
+            <li>
                 <a href="<?php route('data/inputdatagpon'); ?>">
                     <i class="fa fa-upload"></i> Input Gpon
                 </a>

@@ -82,121 +82,67 @@
                         </select>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-3 col-xs-12 control-label">status
+                    </label>
 
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="checkbox">
+                            <label class="">
+                                <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" checked="checked" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> Instalasi
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="">
+                                <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" checked="checked" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> BAPP
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="">
+                                <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" checked="checked" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> WFM
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="">
+                                <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" checked="checked" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> power on
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="">
+                                <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" checked="checked" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> kirim ke HO
+                            </label>
+                        </div>
 
-
-
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Instalasi</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->modul);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="modul" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Slot</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->slot);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="slot" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Port</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->port);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="port" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Ruangan EA</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->ruang_ea);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="ruang_ea" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Slot FTB ea</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->slot_ftbea);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="slot_ftbea" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Port FTB ea</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->port_ftbea);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="port_ftbea" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Ruangan OA</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->ruang_oa);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="ruang_oa" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Slot FTB OA</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->slot_ftboa);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="slot_ftboa" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Port FTB OA</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->port_ftboa);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="port_ftboa" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">STO</label>
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Mitra</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select id="heard" class="form-control" required="" name="sto">
-                            <option value=""><?php show_ifsetoption($data->sto)?></option>
-                            <option value="MTR" name="MTR">MTR</option>
-                            <option value="SWE" name="SWE">SWE</option>
-                            <option value="SGG" name="SGG">SGG</option>
-                            <option value="GER" name="GER">GER</option>
-                            <option value="PRY" name="PRY">PRY</option>
-                            <option value="SEL" name="SEL">SEL</option>
-                            <option value="MBG" name="MBG">MBG</option>
-                            <option value="SBW" name="SBW">SBW</option>
-                            <option value="BIM" name="BIM">BIM</option>
-                            <option value="ALA" name="ALA">ALA</option>
-                            <option value="MLK" name="MLK">MLK</option>
-                            <option value="TET" name="TET">TET</option>
-                            <option value="TLW" name="TLW">TLW</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">ODC</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->odc);?>"
+                        <input value="<?php show_ifset($data->mitra);?>"
                                class="form-control col-md-7 col-xs-12"
-                               type="text" name="odc" required>
+                               type="text" name="mitra" required>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">List ODP</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->listodp);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="listodp" required>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">start instalasi
+                    </label>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <input value="<?php show_ifset($data->tanggal_start_instalasi, date('d-m-Y'), true); ?>" type="text" name="tanggal_start_instalasi" required class="datepicker form-control col-md-7 col-xs-12">
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">selesai instalasi
+                    </label>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <input value="<?php show_ifset($data->tanggal_selesai_instalasi, date('d-m-Y'), true); ?>" type="text" name="tanggal_selesai_instalasi" required class="datepicker form-control col-md-7 col-xs-12">
+                    </div>
+                </div>
+
+
+
 
                 <!--                <div class="form-group">-->
                 <!--                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">kategori</label>-->
@@ -238,3 +184,16 @@
         </div>
     </div>
 </div>
+
+<css>
+    <link href="<?php assets('css/green.css') ?>"" rel="stylesheet">
+    <link href="<?php assets('css/switchery.min.css') ?>"" rel="stylesheet">
+    <link href="<?php assets('css/custom.min.css') ?>"" rel="stylesheet">
+</css>
+
+<js>
+    <script src="<?php assets('js/icheck.min.js') ?>"></script>
+    <script src="<?php assets('js/switchery.min.js') ?>"></script>
+    <script src="<?php assets('js/custom.min.js') ?>"></script>
+
+</js>

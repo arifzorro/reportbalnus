@@ -348,6 +348,32 @@ class Data extends MY_Controller
     {
         $this->render('data/formspbu');
     }
+    public function save_spbu($id = null ){
+//        $tes=$this->input->post('kodespbu');  //cara code igniter mengambil data dari tag html
+        //mengambil data checkbox dari html menggunakan php
+      //  $getchecked=$t
+
+
+        $is_add_state = is_null($id);
+        $data = $this->_fetch_data($is_add_state);
+//        dd($data);
+        //$kategori=$_POST['']
+        // dd($data);
+        //   dd($id);
+        //dd($is_add_state);
+        if ($is_add_state) {
+
+            $is_success = $this->Data_Spbu->insert($data);
+        } else {
+            $is_success = $this->Data_Spbu->update($data, $id);
+        }
+        //var_dump('akses');
+        if ($is_success) set_flash_message("Data telah tersimpan.");
+        else set_flash_message("Data gagal tersimpan.", 'error');
+
+        if ($is_add_state) redirect(base_url('data/inputdatagpon'));
+        else redirect(base_url('data'));
+    }
 
 
 }

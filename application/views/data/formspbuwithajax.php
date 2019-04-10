@@ -156,6 +156,5 @@
     <script src="<?php assets('js/icheck.min.js') ?>"></script>
     <script src="<?php assets('js/switchery.min.js') ?>"></script>
     <script src="<?php assets('js/custom.min.js') ?>"></script>
-    <script src="<?php assets('js/gethtmldatawithajax/saveformwithajax.js') ?>"></script>
 
 </js>

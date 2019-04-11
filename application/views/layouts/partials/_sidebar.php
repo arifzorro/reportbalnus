@@ -2,8 +2,13 @@
     <div class="menu_section">
         <ul class="nav side-menu">
             <li>
-                <a href="<?php route('data/reportspbu'); ?>">
-                    <i class="fa fa-upload"></i> report spbu
+                <a href="<?php route('data/form_spbu'); ?>">
+                    <i class="fa fa-upload"></i> INPUT SPBU
+                </a>
+            </li>
+            <li>
+                <a href="<?php route('data/report_spbu'); ?>">
+                    <i class="fa fa-upload"></i> REPORT SPBU
                 </a>
             </li>
             <li>

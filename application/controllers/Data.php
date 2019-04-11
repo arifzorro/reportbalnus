@@ -356,10 +356,30 @@ class Data extends MY_Controller
     {
         $this->render('data/formg_data_gpon');
     }
-    public function reportspbu()
+    public function form_spbu()
     {
         $this->render('data/formspbu');
     }
+    public function report_spbu()
+    {
+
+        if ($this->input->is_ajax_request()) {
+
+            $from_tgl = $this->input->post('from_tgl');
+            $to_tgl = $this->input->post('to_tgl');
+            $filter = (object)array(
+                'from_tgl' => !empty_or_null($from_tgl) ? set_date($from_tgl) : null,
+                'to_tgl' => !empty_or_null($to_tgl) ? set_date($to_tgl) : (!empty_or_null($from_tgl) ? set_date($from_tgl) : null),
+            );
+
+            json_encode($this->data_spbu_model->get_all_dt($filter));
+
+            return print_r($this->data_spbu_model->get_all_dt($filter));
+        } else {
+            $this->render('data/list_report_spbu');
+        }
+    }
+
     public function save_spbu($id = null ){
         $status_instalasi=$this->input->post('instalasi');  //cara code igniter mengambil data dari tag html
         $status_bapp=$this->input->post('bapp');

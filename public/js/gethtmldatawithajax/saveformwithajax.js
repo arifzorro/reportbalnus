@@ -1,4 +1,5 @@
-var x=document.getElementsByClassName('icheckbox_flat-green');
+var element=docoment.getElementsByTagName("H1")[0];
+var =document.getElementsByClassName('icheckbox_flat-green').getAttributeNode("class").value;
 console.log(x);
 
 

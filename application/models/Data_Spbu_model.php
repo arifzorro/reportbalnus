@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Data_Spbu extends MY_Model {
+class Data_Spbu_model extends MY_Model {
 
     public $table = 'spbu';
 
@@ -11,21 +11,20 @@ class Data_Spbu extends MY_Model {
     //bawaan my model plugin
     public $fillable = array(
         'id',
-        'ipgpon',
-        'tipe_gpon',
-        'modul',
-        'slot',
-        'port',
-        'ruang_ea',
-        'slot_ftbea',
-        'port_ftbea',
-        'ruang_oa',
-        'slot_ftboa',
-        'port_ftboa',
-        'sto',
-        'odc',
-        'listodp',
         'tanggal',
+        'regional',
+        'witel',
+        'kode_spbu',
+        'alamat',
+        'kota',
+        'instalasi',
+        'bapp',
+        'wfm',
+        'mitra',
+        'start_instalasi',
+        'selesai_instalasi',
+        'power',
+        'kirim_ho',
         'pelaksana',
         'insert_by',
         'created_at',

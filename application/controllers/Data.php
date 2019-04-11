@@ -11,6 +11,7 @@ class Data extends MY_Controller
         $this->load->model('vendor_model');
         $this->load->model('data_gpon_model');
         $this->load->model('logbook_model');
+        $this->load->model('Data_Spbu_model');
         //model buatan manual
         $this->load->model('Chart_model');
         $this->load->model('excel_import_model');
@@ -143,6 +144,17 @@ class Data extends MY_Controller
         //dd($data['tanggal']);
         $data = array_merge($data, user_timestamps($is_add_state));
         //dd($data);
+        return $data;
+    }
+
+    public function _fetch_data_with_status($is_add_state,$array_status)
+    {
+        $data = $this->input->post();
+
+        $data['tanggal'] = set_date($data['tanggal']);
+        //dd($data['tanggal']);
+        $data = array_merge($data,$array_status,user_timestamps($is_add_state));
+       // dd($data);
         return $data;
     }
     public function _fetch_data_with_change_date_format($is_add_state)
@@ -349,23 +361,60 @@ class Data extends MY_Controller
         $this->render('data/formspbu');
     }
     public function save_spbu($id = null ){
-//        $tes=$this->input->post('kodespbu');  //cara code igniter mengambil data dari tag html
+        $status_instalasi=$this->input->post('instalasi');  //cara code igniter mengambil data dari tag html
+        $status_bapp=$this->input->post('bapp');
+        $status_wfm=$this->input->post('wfm');
+        $status_power=$this->input->post('power_on');
+        $status_kirim=$this->input->post('kirim_ho');
+        if($status_instalasi=="instalasi"){
+            $status_instalasi="ok";
+        }
+        else{
+            $status_instalasi="NOK";
+        }
+        if($status_bapp =="bapp"){
+            $status_bapp ="ok";
+        }
+        else{
+            $status_bapp ="NOK";
+        }
+        if($status_wfm == "wfm"){
+            $status_wfm ="ok";
+        }
+        else{
+            $status_wfm ="NOK";
+        }
+        if($status_power == "power_on"){
+            $status_power ="ok";
+        }
+        else{
+            $status_power ="NOK";
+        }
+        if($status_kirim== "kirim_ho"){
+            $status_kirim ="ok";
+        }
+        else{
+            $status_kirim ="NOK";
+        }
+
+        //array assosiatig
+        $array_status=array("instalasi"=>$status_instalasi,"bapp"=>$status_bapp,"wfm"=>$status_wfm,"power"=>$status_power,"kirim_ho"=>$status_kirim);
+
         //mengambil data checkbox dari html menggunakan php
       //  $getchecked=$t
 
 
         $is_add_state = is_null($id);
-        $data = $this->_fetch_data($is_add_state);
+        $data = $this->_fetch_data_with_status($is_add_state,$array_status);
 //        dd($data);
         //$kategori=$_POST['']
-        // dd($data);
-        //   dd($id);
+        //dd($data);
+        //dd($id);
         //dd($is_add_state);
         if ($is_add_state) {
-
-            $is_success = $this->Data_Spbu->insert($data);
+            $is_success = $this->Data_Spbu_model->insert($data);
         } else {
-            $is_success = $this->Data_Spbu->update($data, $id);
+            $is_success = $this->Data_Spbu_model->update($data, $id);
         }
         //var_dump('akses');
         if ($is_success) set_flash_message("Data telah tersimpan.");

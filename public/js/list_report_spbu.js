@@ -1,5 +1,5 @@
-console.log("tes",$('#table_data').DataTable());
-console.log("tes",$('.from_tgl').val());
+// console.log("tes",$('#table_data').DataTable());
+// console.log("tes",$('.from_tgl').val());
 console.log(window.location.href);
 var table = $('#table_data').DataTable({
     dom: 'lBfrtip',
@@ -48,7 +48,6 @@ var table = $('#table_data').DataTable({
         {"data": "mitra"},
         {"data": "start_instalasi"},
         {"data": "selesai_instalasi"},
-        {"data": "pelaksana"},
 
     ]
 });

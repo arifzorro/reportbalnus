@@ -47,7 +47,7 @@ class Data_Spbu_model extends MY_Model {
             $this->datatables->where("d.tgl_ganti >= '$filter->from_tgl'");
             $this->datatables->where("d.tgl_ganti <= '$filter->to_tgl'");
         }
-        //dd($this->datatables->generate());
+//      json_encode($this->datatables->generate());
         return $this->datatables->generate();
     }
 

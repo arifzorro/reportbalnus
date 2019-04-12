@@ -372,9 +372,9 @@ class Data extends MY_Controller
                 'to_tgl' => !empty_or_null($to_tgl) ? set_date($to_tgl) : (!empty_or_null($from_tgl) ? set_date($from_tgl) : null),
             );
 
-            json_encode($this->data_spbu_model->get_all_dt($filter));
+            json_encode($this->Data_Spbu_model->get_all_dt($filter));
 
-            return print_r($this->data_spbu_model->get_all_dt($filter));
+            return print_r($this->Data_Spbu_model->get_all_dt($filter));
         } else {
             $this->render('data/list_report_spbu');
         }

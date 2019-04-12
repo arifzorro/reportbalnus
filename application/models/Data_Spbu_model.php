@@ -40,7 +40,7 @@ class Data_Spbu_model extends MY_Model {
             d.selesai_instalasi,d.pelaksana,d.created_at,d.updated_at
         ")
             ->from("$this->table d")
-            ->edit_column('tanggal', '$1', "show_date(tanggal)")
+            ->edit_column('tanggal', '$1', "tanggal")
             ->add_column('action', '$1', "set_actions(id, data)");//langsung pake nama field di database dengan id_soal
 
         if (!is_null($filter->from_tgl)) {

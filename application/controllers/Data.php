@@ -152,9 +152,11 @@ class Data extends MY_Controller
         $data = $this->input->post();
 
         $data['tanggal'] = set_date($data['tanggal']);
+        $data['start_instalasi']=set_date($data['start_instalasi']);
+        $data['selesai_instalasi']=set_date($data['selesai_instalasi']);
         //dd($data['tanggal']);
         $data = array_merge($data,$array_status,user_timestamps($is_add_state));
-       // dd($data);
+//        dd($data);
         return $data;
     }
     public function _fetch_data_with_change_date_format($is_add_state)

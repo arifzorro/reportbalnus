@@ -41,7 +41,7 @@ class Data_Spbu_model extends MY_Model {
         ")
             ->from("$this->table d")
             ->edit_column('tanggal', '$1', "tanggal")
-            ->add_column('action', '$1', "set_actions(id, data)");//langsung pake nama field di database dengan id_soal
+            ->add_column('action', '$1', "set_actions_choose(id, data)");//langsung pake nama field di database dengan id_soal
 
         if (!is_null($filter->from_tgl)) {
             $this->datatables->where("d.tgl_ganti >= '$filter->from_tgl'");

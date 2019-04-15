@@ -360,10 +360,19 @@ class Data extends MY_Controller
     }
     public function form_spbu()
     {
-        $this->render('data/formspbu');
+
+//        if( $this->uri->segment(2) =="form_spbu" ){
+//            echo 'tes';
+//        }
+//        else{
+//            echo "salah";
+//        }
+      // echo $this->uri->segment(2);
+       $this->render('data/formspbu');
     }
     public function report_spbu()
     {
+       // ($this->config->base_url());  //mengambil base url
 
         if ($this->input->is_ajax_request()) {
 
@@ -445,6 +454,32 @@ class Data extends MY_Controller
         if ($is_add_state) redirect(base_url('data/inputdatagpon'));
         else redirect(base_url('data'));
     }
+
+    public function edit_spbu($id)
+    {
+        //dd($id);
+        //CODE RAMA
+//        $this->data['data'] = $this->data_model->with_vendor()->get($id);
+//        $this->data['vendor'] = $this->data['data']->vendor;
+//        $this->render('data/formsoal');
+        //var_dump($id);
+        //maksudnya
+        $this->data['data'] = $this->Data_Spbu_model->get($id);
+        //var_dump($this->data['data']);
+        //$this->data['vendor'] = $this->data['data']->vendor;
+        //var_dump($this->data['vendor']);
+        $this->render('data/formspbu');
+    }
+    public function delete_spbu($id)
+    {
+        $success = $this->Data_Spbu_Model->delete(array('id' => $id));
+        if ($success === FALSE) {
+            return NULL;
+        } else {
+            echo "Data berhasil dihapus.";
+        }
+    }
+
 
 
 }

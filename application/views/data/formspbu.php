@@ -58,7 +58,7 @@
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Kota</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select id="heard" class="form-control" required="" name="kota">
-                            <option value="<?php show_ifsetoption($data->kota)?>" name="<?php show_ifsetoption($data->kota)?>"><?php show_ifsetoption($data->kota)?></option>
+                            <option value="" name="<?php show_ifsetoption($data->kota)?>"><?php show_ifsetoption($data->kota)?></option>
                             <option value="Mataram" name="Mataram">Mataram</option>
                             <option value="Lombok Timur" name="Lombok Timur">Lombok Timur</option>
                             <option value="Lombok Barat" name="Lombok Barat">Lombok Barat</option>

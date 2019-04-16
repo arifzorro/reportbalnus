@@ -452,7 +452,7 @@ class Data extends MY_Controller
         if ($is_success) set_flash_message("Data telah tersimpan.");
         else set_flash_message("Data gagal tersimpan.", 'error');
 
-        if ($is_add_state) redirect(base_url('data/inputdatagpon'));
+        if ($is_add_state) redirect(base_url('data/report_spbu'));
         else redirect(base_url('data'));
     }
 

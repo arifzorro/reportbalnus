@@ -77,8 +77,8 @@
                     <div class="col-md-9 col-sm-9 col-xs-12">
                         <div class="checkbox">
                             <label class="">
-                                <div class="icheckbox_flat-green  <?php show_ifset_checkbar($data->instalasi) ?>" style="position: relative;">
-                                    <input type="checkbox" name=instalasi value="instalasi" class="flat" style="position: absolute; opacity: 0;">
+                                <div class="icheckbox_flat-green" style="position: relative; value=":;">
+                                    <input type="checkbox" name=instalasi value="instalasi" class="flat" checked="<?php show_ifset_checkbar($data->instalasi) ?>" style="position: absolute; opacity: 0;">
                                     <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                                 </div> Instalasi
                             </label>
@@ -165,15 +165,15 @@
 
 <css>
     <link href="<?php assets('css/green.css') ?>"" rel="stylesheet">
-    <link href="<?php assets('css/switchery.min.css') ?>"" rel="stylesheet">
-    <link href="<?php assets('css/custom.min.css') ?>"" rel="stylesheet">
+<!--    <link href="--><?php //assets('css/switchery.min.css') ?><!--"" rel="stylesheet">-->
+<!--    <link href="--><?php //assets('css/custom.min.css') ?><!--"" rel="stylesheet">-->
 </css>
 
 <js>
     <script src="<?php assets('js/icheck.min.js') ?>"></script>
-    <script src="<?php assets('js/switchery.min.js') ?>"></script>
+<!--    <script src="--><?php //assets('js/switchery.min.js') ?><!--"></script>-->
     <script src="<?php assets('js/custom.min.js') ?>"></script>
-    <script src="<?php assets('js/gethtmldatawithajax/saveformwithajax.js') ?>"></script>
+<!--    <script src="--><?php //assets('js/gethtmldatawithajax/saveformwithajax.js') ?><!--"></script>-->
 
 </js>
 

@@ -113,7 +113,13 @@ function show_ifset(&$var, $default = NULL, $is_date = FALSE) {
 
 function show_ifset_checkbar(&$var, $default = NULL, $is_date = FALSE) {
     //var_dump($var);
-    echo !empty_or_null($var) ? echo "checked": $default;
+    if( !empty_or_null($var)){
+        echo "checked";
+    }
+    else{
+        echo $default;
+    }
+
 }
 function show_ifsetoption(&$var, $default = NULL, $is_date = FALSE) {
     //var_dump($var);

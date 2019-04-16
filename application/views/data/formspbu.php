@@ -30,7 +30,7 @@
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Witel</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select id="heard" class="form-control" required="" name="witel">
-                            <option value=""><?php show_ifsetoption($data->witel)?></option>
+                            <option value="<?php show_ifsetoption($data->witel)?>" name="<?php show_ifsetoption($data->witel)?>"><?php show_ifsetoption($data->witel)?></option>
                             <option value="Mataram" name="Mataram">Mataram</option>
                             <option value="Kupang" name="Kupang">Kupang</option>
                         </select>
@@ -58,7 +58,7 @@
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Kota</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select id="heard" class="form-control" required="" name="kota">
-                            <option value=""><?php show_ifsetoption($data->kota)?></option>
+                            <option value="<?php show_ifsetoption($data->kota)?>" name="<?php show_ifsetoption($data->kota)?>"><?php show_ifsetoption($data->kota)?></option>
                             <option value="Mataram" name="Mataram">Mataram</option>
                             <option value="Lombok Timur" name="Lombok Timur">Lombok Timur</option>
                             <option value="Lombok Barat" name="Lombok Barat">Lombok Barat</option>
@@ -78,7 +78,7 @@
                         <div class="checkbox">
                             <label class="">
                                 <div class="icheckbox_flat-green" style="position: relative; value=":;">
-                                    <input type="checkbox" name=instalasi value="instalasi" class="flat" checked="<?php show_ifset_checkbar($data->instalasi) ?>" style="position: absolute; opacity: 0;">
+                                    <input type="checkbox" name=instalasi value="instalasi" class="flat" <?php show_ifset_checkbar($data->instalasi) ?> style="position: absolute; opacity: 0;">
                                     <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                                 </div> Instalasi
                             </label>
@@ -86,7 +86,7 @@
                         <div class="checkbox">
                             <label class="">
                                 <div class="icheckbox_flat-green" style="position: relative;">
-                                    <input type="checkbox" name="bapp" value="bapp" class="flat" style="position: absolute; opacity: 0;">
+                                    <input type="checkbox" name="bapp" value="bapp" class="flat" <?php show_ifset_checkbar($data->bapp) ?> style="position: absolute; opacity: 0;">
                                     <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                                 </div> BAPP
                             </label>
@@ -94,7 +94,7 @@
                         <div class="checkbox">
                             <label class="">
                                 <div class="icheckbox_flat-green" style="position: relative;">
-                                    <input type="checkbox" name="wfm" value="wfm" class="flat" style="position: absolute; opacity: 0;">
+                                    <input type="checkbox" name="wfm" value="wfm" class="flat" <?php show_ifset_checkbar($data->wfm) ?> style="position: absolute; opacity: 0;">
                                     <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                                 </div> WFM
                             </label>
@@ -102,7 +102,7 @@
                         <div class="checkbox">
                             <label class="">
                                 <div class="icheckbox_flat-green" style="position: relative;">
-                                    <input type="checkbox" name="power" value="power" class="flat" style="position: absolute; opacity: 0;">
+                                    <input type="checkbox" name="power" value="power" class="flat" <?php show_ifset_checkbar($data->power) ?> style="position: absolute; opacity: 0;">
                                     <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                                 </div> power on
                             </label>

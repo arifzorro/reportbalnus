@@ -53,7 +53,7 @@
 }
 
 /*add css sendiri untuk logika centang dengan php*/
-.icheckbox_flat-green.checked {
+.icheckbox_flat-green .checked {
     background-position: -22px 0 !important;
     /*background: url(green.png) no-repeat;*/
 }

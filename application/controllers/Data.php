@@ -395,34 +395,35 @@ class Data extends MY_Controller
         $status_instalasi=$this->input->post('instalasi');  //cara code igniter mengambil data dari tag html
         $status_bapp=$this->input->post('bapp');
         $status_wfm=$this->input->post('wfm');
-        $status_power=$this->input->post('power_on');
+        $status_power=$this->input->post('power');
+//        dd($status_power);
         $status_kirim=$this->input->post('kirim_ho');
         if($status_instalasi=="instalasi"){
-            $status_instalasi="ok";
+            $status_instalasi="OK";
         }
         else{
             $status_instalasi="NOK";
         }
         if($status_bapp =="bapp"){
-            $status_bapp ="ok";
+            $status_bapp ="OK";
         }
         else{
             $status_bapp ="NOK";
         }
         if($status_wfm == "wfm"){
-            $status_wfm ="ok";
+            $status_wfm ="OK";
         }
         else{
             $status_wfm ="NOK";
         }
-        if($status_power == "power_on"){
-            $status_power ="ok";
+        if($status_power == "power"){
+            $status_power ="OK";
         }
         else{
             $status_power ="NOK";
         }
         if($status_kirim== "kirim_ho"){
-            $status_kirim ="ok";
+            $status_kirim ="OK";
         }
         else{
             $status_kirim ="NOK";
@@ -472,7 +473,7 @@ class Data extends MY_Controller
     }
     public function delete_spbu($id)
     {
-        $success = $this->Data_Spbu_Model->delete(array('id' => $id));
+        $success = $this->Data_Spbu_model->delete(array('id' => $id));
         if ($success === FALSE) {
             return NULL;
         } else {

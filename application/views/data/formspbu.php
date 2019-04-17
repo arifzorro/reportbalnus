@@ -149,7 +149,7 @@
                     </label>
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <input name="instalasi" type="file" id="instalasi"/>
+                        <input name="instalasi" type="file" id="instalasi" required/>
                     </div>
 
 
@@ -160,7 +160,7 @@
                     </label>
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <input name="spbu" type="file" id="spbu" />
+                        <input name="spbu" type="file" id="spbu" required />
                     </div>
 
 

@@ -488,7 +488,7 @@ class Data extends MY_Controller
 
     public function upload()
     {
-    //$target_dir = base_url()."upload_file/";
+    //$target_dir = base_url()."upload_file/";  ini untuk udah server
         $target_dir =$_SERVER['DOCUMENT_ROOT']."/reportbalnus/public/upload_file/";
 //    dd($target_dir);
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);

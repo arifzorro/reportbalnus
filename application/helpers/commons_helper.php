@@ -124,8 +124,8 @@ function show_ifset_checkbar(&$var, $default = NULL, $is_date = FALSE) {
 
 }
 function show_ifsetoption(&$var, $default = NULL, $is_date = FALSE) {
-    //var_dump($var);
-    echo !empty_or_null($var) ? ($is_date ? show_date($var) : $var) : (is_null($default) ? "PILIH":$default);
+   // var_dump($var);
+    echo !empty_or_null($var) ? ($is_date ? show_date($var) : $var) : (is_null($default) ? "":$default);
 }
 /*
  * mengubah param menjadi array

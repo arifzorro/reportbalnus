@@ -144,28 +144,6 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="upload">foto instalasi
-                    </label>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <input name="instalasi" type="file" id="instalasi"/>
-                    </div>
-
-
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="upload">foto spbu
-                    </label>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <input name="spbu" type="file" id="spbu" />
-                    </div>
-
-
-                </div>
-
 <!--        <form enctype="multipart/form-data" action="action.php" method="POST">-->
 <!--            <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />-->
 <!--            <input name="userfile" type="file" />-->

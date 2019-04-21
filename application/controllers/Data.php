@@ -404,7 +404,8 @@ class Data extends MY_Controller
         $path ="http://" . $_SERVER['HTTP_HOST'];
         $path.= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
         $path.="upload_file";
-        $file_name=$this->input->post("instalasi");
+        $file_name_instalasi=$this->input->post("instalasi");
+        $file_name_spbu=$this->input->post("spbu");
     //   $file_name_instalasi=$this->input->post("instalasi");
       //  dd($file_name_spbu);
       //  dd($path);
@@ -448,7 +449,8 @@ class Data extends MY_Controller
 
         //array assosiatig
         $array_status=array("instalasi"=>$status_instalasi,"bapp"=>$status_bapp,"wfm"=>$status_wfm,"power"=>$status_power,"kirim_ho"=>$status_kirim);
-
+        $array_directory=array("filename_instalasi"=>$file_name_instalasi,"file_name_spbu"=>$file_name_spbu);
+        dd($array_directory);
         //mengambil data checkbox dari html menggunakan php
       //  $getchecked=$t
         $directory=

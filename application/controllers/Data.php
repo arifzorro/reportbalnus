@@ -392,6 +392,23 @@ class Data extends MY_Controller
     }
 
     public function save_spbu($id = null ){
+   //     $target_dir =$_SERVER['DOCUMENT_ROOT']."/reportbalnus/public/upload_file/";
+    //    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+      //  dd($target_file);
+      //  $path ="http://" . $_SERVER['HTTP_HOST']; //hasilnya localhost
+       // $path= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']); //hasilnya base url http://localhost/reportbalnus/public/
+       // dd($path);
+       // $file_name_spbu = $_FILES['instalasi']['name'];
+//        $file_name_instalasi=$_FILES['instalasi']['name'];
+        $file_name=$this->input->post("spbu");
+        $path ="http://" . $_SERVER['HTTP_HOST'];
+        $path.= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+        $path.="upload_file";
+        $file_name=$this->input->post("instalasi");
+    //   $file_name_instalasi=$this->input->post("instalasi");
+      //  dd($file_name_spbu);
+      //  dd($path);
+
         $status_instalasi=$this->input->post('instalasi');  //cara code igniter mengambil data dari tag html
         $status_bapp=$this->input->post('bapp');
         $status_wfm=$this->input->post('wfm');
@@ -434,7 +451,7 @@ class Data extends MY_Controller
 
         //mengambil data checkbox dari html menggunakan php
       //  $getchecked=$t
-
+        $directory=
 
         $is_add_state = is_null($id);
         $data = $this->_fetch_data_with_status($is_add_state,$array_status);
@@ -488,8 +505,10 @@ class Data extends MY_Controller
 
     public function upload()
     {
-    //$target_dir = base_url()."upload_file/";  ini untuk udah server
-        $target_dir =$_SERVER['DOCUMENT_ROOT']."/reportbalnus/public/upload_file/";
+        $file_name_spbu = $_FILES['fileToUpload']['name'];
+        dd($file_name_spbu);
+    //$target_dir = base_url()."upload_file/"; // ini untuk udah servers
+       $target_dir =$_SERVER['DOCUMENT_ROOT']."/reportbalnus/public/upload_file/";
 //    dd($target_dir);
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;

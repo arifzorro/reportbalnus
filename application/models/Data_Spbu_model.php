@@ -26,6 +26,8 @@ class Data_Spbu_model extends MY_Model {
         'selesai_instalasi',
         'power',
         'kirim_ho',
+        'foto_spbu',
+        'foto_instalasi',
         'pelaksana',
         'insert_by',
         'created_at',

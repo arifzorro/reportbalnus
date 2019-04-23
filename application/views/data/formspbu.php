@@ -148,8 +148,8 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="upload">foto instalasi
                     </label>
                     <div class="col-md-3 col-sm-3 col-xs-12">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <input name="instalasi" type="file" id="instalasi" required/>
+<!--                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />-->
+                        <input name="instalasi" type="file" id="instalasi" required accept="image/x-png,image/gif,image/jpeg"/>
                     </div>
 
 
@@ -159,8 +159,8 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="upload">foto spbu
                     </label>
                     <div class="col-md-3 col-sm-3 col-xs-12">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <input name="spbu" type="file" id="spbu" required />
+<!--                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />-->
+                        <input name="spbu" type="file" id="spbu" required  accept="image/x-png,image/gif,image/jpeg"/>
                     </div>
 
 

@@ -159,6 +159,18 @@ class Data extends MY_Controller
 //        dd($data);
         return $data;
     }
+    public function _fetch_data_with_status_and_dir($is_add_state,$array_status,$file_name)
+    {
+        $data = $this->input->post();
+
+        $data['tanggal'] = set_date($data['tanggal']);
+        $data['start_instalasi']=set_date($data['start_instalasi']);
+        $data['selesai_instalasi']=set_date($data['selesai_instalasi']);
+        //dd($data['tanggal']);
+        $data = array_merge($data,$array_status,$file_name,user_timestamps($is_add_state));
+//        dd($data);
+        return $data;
+    }
     public function _fetch_data_with_change_date_format($is_add_state)
     {
         $data = $this->input->post();
@@ -449,17 +461,17 @@ class Data extends MY_Controller
 
         //array assosiatig
         $array_status=array("instalasi"=>$status_instalasi,"bapp"=>$status_bapp,"wfm"=>$status_wfm,"power"=>$status_power,"kirim_ho"=>$status_kirim);
-        $array_directory=array("filename_instalasi"=>$file_name_instalasi,"file_name_spbu"=>$file_name_spbu);
-        dd($array_directory);
+        $array_filename=array("foto_instalasi"=>$file_name_instalasi,"foto_spbu"=>$file_name_spbu);
+       // dd($array_directory);
         //mengambil data checkbox dari html menggunakan php
       //  $getchecked=$t
         $directory=
 
         $is_add_state = is_null($id);
-        $data = $this->_fetch_data_with_status($is_add_state,$array_status);
+        $data = $this->_fetch_data_with_status_and_dir($is_add_state,$array_status,$array_filename);
 //        dd($data);
         //$kategori=$_POST['']
-        //dd($data);
+        dd($data);
         //dd($id);
         //dd($is_add_state);
         if ($is_add_state) {

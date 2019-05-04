@@ -412,12 +412,12 @@ class Data extends MY_Controller
        // dd($path);
        // $file_name_spbu = $_FILES['instalasi']['name'];
 //        $file_name_instalasi=$_FILES['instalasi']['name'];
-        $file_name=$this->input->post("spbu");
+       // $file_name=$this->input->post("spbu");
         $path ="http://" . $_SERVER['HTTP_HOST'];
         $path.= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
         $path.="upload_file";
-        $file_name_instalasi=$this->input->post("instalasi");
-        $file_name_spbu=$this->input->post("spbu");
+        $file_name_instalasi=$this->input->post("foto_instalasi");
+        $file_name_spbu=$this->input->post("foto_spbu");
     //   $file_name_instalasi=$this->input->post("instalasi");
       //  dd($file_name_spbu);
       //  dd($path);
@@ -471,7 +471,7 @@ class Data extends MY_Controller
         $data = $this->_fetch_data_with_status_and_dir($is_add_state,$array_status,$array_filename);
 //        dd($data);
         //$kategori=$_POST['']
-        dd($data);
+//        dd($data);
         //dd($id);
         //dd($is_add_state);
         if ($is_add_state) {

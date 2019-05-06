@@ -463,11 +463,9 @@ class Data extends MY_Controller
         $array_status=array("instalasi"=>$status_instalasi,"bapp"=>$status_bapp,"wfm"=>$status_wfm,"power"=>$status_power,"kirim_ho"=>$status_kirim);
         $array_filename=array("foto_instalasi"=>$file_name_instalasi,"foto_spbu"=>$file_name_spbu);
        // dd($array_directory);
-        //mengambil data checkbox dari html menggunakan php
-      //  $getchecked=$t
-        $directory=
-
         $is_add_state = is_null($id);
+        $this->checkingfileupload($array_filename);
+
         $data = $this->_fetch_data_with_status_and_dir($is_add_state,$array_status,$array_filename);
 //        dd($data);
         //$kategori=$_POST['']
@@ -517,9 +515,45 @@ class Data extends MY_Controller
         $this->render('testing/tes');
     }
 
+    public function checkingfileupload($array_filename)
+    {
+        $limit = 10 * 1024 * 1024;
+       // dd(isset($_FILES['foto_instalasi']));
+       // if (isset($_FILES['foto_instalasi']) && isset($_FILES['foto_spbu'])) {  //pengecekan isset g' jalan
+            //karena ada multiple, jadi dilakukan pengecekan foreach
+            $jumlahFile = count($array_filename);
+            dd($jumlahFile);
+            for ($i = 0; $i < $jumlahFile; $i++) {
+                $namafile = $_FILES['upload']['name'][$i];
+                $tmp = $_FILES['upload']['tmp_name'][$i];
+                $type = $_FILES['upload']['type'][$i];
+                $error = $_FILES['upload']['error'][$i];
+                $size = $_FILES['upload']['size'][$i];
+
+                //lakukan pengecekan disini
+                if ($size > $limit) {
+                    $_SESSION['error'] = 'Ukuran gambar yang diupload melebihi yang diizinkan';
+                    header('location: index.php');
+                    exit();
+                }
+
+                if ($error > 0) {
+                    $_SESSION['error'] = 'Upload gagal (' . $error . ')';
+                    header('location: index.php');
+                    exit();
+                }
+
+
+                //kalau pengecekan sudah selesai, langsung proses
+                move_uploaded_file($tmp, 'upload/' . $namafile);
+            }
+
+      //  }
+    }
+
     public function upload()
     {
-        $file_name_spbu = $_FILES['fileToUpload']['name'];
+        $file_name_spbu = $_FILES['fileToUpload']['name'];   //mengambil nama file
         dd($file_name_spbu);
     //$target_dir = base_url()."upload_file/"; // ini untuk udah servers
        $target_dir =$_SERVER['DOCUMENT_ROOT']."/reportbalnus/public/upload_file/";

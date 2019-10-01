@@ -67,7 +67,7 @@ class Data extends MY_Controller
 
     public function create()
     {
-
+        //coba aja tes upload
         $this->data['vendor'] = $this->vendor_model->get(1);
         //var_dump($this->vendor_model->get(1));
         $this->render('data/form');
